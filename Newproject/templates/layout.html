@@ -1,0 +1,38 @@
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% tailwind_css %}
+    {% block title %}
+      title
+    {% endblock %}
+    
+</head>
+<body>
+    {% block nav %}
+     <nav class="navbar m-auto" >
+        <ul class="text-center justify-center flex gap-6 ">
+            
+            <li class =" hover:bg-sky-200 p-1 rounded-md border-r-2"><a href="#">Home</a></li>
+            <li class ="  hover:bg-sky-200 p-1 rounded-md border-r-2"><a href="#">About Me</a></li>
+            <li class ="  hover:bg-sky-200 p-1 rounded-md border-r-2"><a href="#">Service</a></li>
+            <li class =" hover:bg-sky-200 p-1 rounded-md border-r-2"><a href="#">Contact</a></li>
+            
+        </ul>
+     </nav>  
+    {% endblock %}
+
+    <main>
+        {% block contain %}
+        {% endblock %}
+    </main>
+
+
+    {% block footer %}
+    &copy; CopyRight 2024
+    {% endblock %}
+</body>
+</html>
