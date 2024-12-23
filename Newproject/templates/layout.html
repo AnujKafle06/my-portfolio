@@ -1,38 +1,75 @@
 {% load static tailwind_tags %}
+{% load static %}
+
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% tailwind_css %}
-    {% block title %}
-      title
-    {% endblock %}
-    
-</head>
-<body>
+    <title>{% block title %} My Website {% endblock %}</title>
+    <link rel="stylesheet" href="{% static '../static/css/style1.css' %}">
+
+    {% block head %}{% endblock head %}
+  </head>
+  <body class="">
     {% block nav %}
-     <nav class="navbar m-auto" >
-        <ul class="text-center justify-center flex gap-6 ">
-            
-            <li class =" hover:bg-sky-200 p-1 rounded-md border-r-2"><a href="#">Home</a></li>
-            <li class ="  hover:bg-sky-200 p-1 rounded-md border-r-2"><a href="#">About Me</a></li>
-            <li class ="  hover:bg-sky-200 p-1 rounded-md border-r-2"><a href="#">Service</a></li>
-            <li class =" hover:bg-sky-200 p-1 rounded-md border-r-2"><a href="#">Contact</a></li>
-            
-        </ul>
-     </nav>  
-    {% endblock %}
+    <div class="w-full h-full">
 
-    <main>
-        {% block contain %}
-        {% endblock %}
-    </main>
+    <nav class="navbar flex justify-between px-5 border-b-2 border-b-yellow-600 ">
 
+      <div class="">
+        <img src="{% static '../static/logo AK.png' %}" alt="logo" class="size-16 rounded-3xl mt-4 m-4 mr-7 ">
 
-    {% block footer %}
-    &copy; CopyRight 2024
-    {% endblock %}
-</body>
+      </div>
+      <div class="p-2 w-full h-full">
+
+  
+        
+          <ul class="flex gap-6 justify-center">
+            <li class="hover:bg-sky-300 p-2 rounded-md border-r-2 m-2 mr-2">
+              <a href="#">Home</a>
+            </li>
+            <li class="hover:bg-sky-300 p-2 rounded-md border-r-2 m-2 mr-2">
+              <a href="#">About Me</a>
+            </li>
+            <li class="hover:bg-sky-300 p-2 rounded-md border-r-2 m-2 mr-2">
+              <a href="#">Skill</a>
+            </li>
+            <li class="hover:bg-sky-300 p-2 rounded-md border-r-2 m-2 mr-2">
+              <a href="#">Contact</a>
+            </li>
+            <li class="hover:bg-sky-300 p-2 rounded-md border-r-2 m-2 mr-2">
+              <a href="#">Project</a>
+            </li>
+          </div>
+            <div class="list-none p-4">
+            <li>
+              
+              <button
+                type="submit"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold  rounded  m-3  p-2  w-full h-full  "
+              >
+                Hire me
+              </button>
+
+            </li>
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    
+
+      {% endblock %}
+
+      {% block contain %} 
+      <main>
+      </main>
+      {% endblock %}
+
+      {% block footer %} &copy; CopyRight 2024 {% endblock %}
+    
+  </body>
 </html>
