@@ -17,45 +17,45 @@
     {% block nav %}
     <div class="w-full h-full">
 
-    <nav class="navbar flex justify-between px-5 border-b-2 border-b-yellow-600 ">
+    <nav class="md:flex border-b-2 border-b-yellow-600 ">
 
-      <div class="">
-        <img src="{% static '../static/logo AK.png' %}" alt="logo" class="size-16 rounded-3xl mt-4 m-4 mr-7 ">
+      <div class="flex">
+        <img src="{% static '../static/logo AK.png' %}" alt="logo" class="md:size-16 rounded-3xl md:mt-4 md:m-4 md:mr-7  size-9">
 
       </div>
-      <div class="p-2 w-full h-full">
+      <div class="p-2 w-full h-full ">
 
   
         
-          <ul class="flex gap-6 justify-center">
+          <ul class="flex md:gap-6 justify-center">
             <li class="hover:bg-sky-300 p-2 rounded-md border-r-2 m-2 mr-2">
-              <a href="#">Home</a>
+              <a href="#" class="text-nowrap">Home</a>
             </li>
             <li class="hover:bg-sky-300 p-2 rounded-md border-r-2 m-2 mr-2">
-              <a href="#">About Me</a>
+              <a href="#" class="text-nowrap">About Me</a>
             </li>
             <li class="hover:bg-sky-300 p-2 rounded-md border-r-2 m-2 mr-2">
-              <a href="#">Skill</a>
+              <a href="#" class="text-nowrap">Skill</a>
             </li>
             <li class="hover:bg-sky-300 p-2 rounded-md border-r-2 m-2 mr-2">
-              <a href="#">Contact</a>
+              <a href="#" class="text-nowrap">Contact</a>
             </li>
             <li class="hover:bg-sky-300 p-2 rounded-md border-r-2 m-2 mr-2">
-              <a href="#">Project</a>
+              <a href="#" class="text-nowrap">Project</a>
             </li>
           </div>
-            <div class="list-none p-4">
-            <li>
-              
-              <button
-                type="submit"
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold  rounded  m-3  p-2  w-full h-full  "
-              >
-                Hire me
-              </button>
+              <div class="list-none p-4">
+              <li>
+                
+                <button
+                  type="submit"
+                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold  rounded  m-3  p-2  md:w-full md:h-full  "
+                >
+                  Hire me
+                </button>
 
-            </li>
-            </div>
+              </li>
+              </div>
           </ul>
         </nav>
       </div>

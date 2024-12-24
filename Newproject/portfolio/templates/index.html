@@ -4,7 +4,12 @@
 
 {% block contain %}
 <main class="w-full h-full">
-  <div class="relative w-full h-full lg:flex flex-row lg:grid-cols-2  ">
+  <div class="relative w-full h-full lg:flex flex-row border-b-2 border-b-yellow-600  ">
+
+    <div class="md:w-2/3 h-full  py-10 px-10 bg-purple-300 border-8 rounded-s-3xl  ">
+      <img src="{% static '../static/computer.png' %}" alt="" class="rounded-full w-full h-full  md:mix-blend-normal" />
+    </div>
+  
     <div class=" container w-full items-start justify-start h-full flex flex-col p-8 ">
 
       <h1 class="m-2 p-10 font-bold text-3xl w-full h-full"><b>I am Anuj Kafle</b></h1>
@@ -27,14 +32,12 @@
       Hire me
     </button>
     </div>
-
-    <div class="w-2/3 h-full justify-end py-10 px-10 bg-purple-300 border-8 rounded-s-3xl  ">
-      <img src="{% static '../static/computer.png' %}" alt="" class="rounded-full w-full h-full mix-blend-normal" />
-    </div>
   </div>
 
-  <div class="w-full h-full flex flex-row border-b-2 border-orange-400 ">
-    <div class="w-full h-full p-10" >
+    
+
+  <div class="w-full h-full md:flex md:flex-row border-b-2 border-orange-400 ">
+    <div class="w-full h-full p-10 border-b-2 border-b-yellow-600 md:border-none" >
         <h1 class="text-center m-2 p-10 font-bold text-3xl hover:underline  ">About Me</h1>
         <p class="text-wrap text-justify ">I am currently a student at Texas College, where I am pursuing a degree in BIT. I have a strong passion for coding and a love for learning new things. I graduated from JMC High School and completed my earlier education at Peace Nepal School. My current focus is on mastering Django, and I am dedicated to honing my skills to become a proficient developer.</p>
     </div>
@@ -43,23 +46,23 @@
     <h1 class="hover:underline text-center m-2 p-10 font-bold text-3xl"> Contact</h1>
     
         <ul>
-            <p class="ml-10">If you have any question you can reach me through anujkafle06@gmail.com <br>or social media:</p>
+            <p class="md:ml-10  ">If you have any question you can reach me through anujkafle06@gmail.com <br>or social media:</p>
             <div class="flex">
-            <div class="w-full h-full ml-8">
+            <div class="w-full h-full md:ml-8">
 
-             <img src="{% static '../static/icon.png'%}" alt="logo" class="w-10 h-10 ml-6"/>
+             <img src="{% static '../static/icon.png'%}" alt="logo" class="w-10 h-10 ml-4 md:ml-6"/>
             <li class="text-blue-500 hover:text-blue-800 mr-6 text-sm"><a href="https://www.facebook.com/anuj.kafle.3">Facebook</a></li>
         </div>
         <div class="w-full h-full ml-6">
-            <img src="{% static '../static/icons8-instagram-logo-50.png'%}" alt="logo" class="w-10 h-10 ml-6"/>
+            <img src="{% static '../static/icons8-instagram-logo-50.png'%}" alt="logo" class="w-10 h-10 ml-4 md:ml-6"/>
            <li class="text-red-500 hover:text-red-800 mr-6 text-sm"><a href="https://www.instagram.com/anuj.kafle.3/">Instagram</a></li>
        </div>
        <div class="w-full h-full ml-6">
-        <img src="{% static '../static/icons8-linkedin-logo-50.png'%}" alt="logo" class="w-10 h-10 ml-6"/>
+        <img src="{% static '../static/icons8-linkedin-logo-50.png'%}" alt="logo" class="w-10 h-10 ml-2 md:ml-6"/>
        <li class="text-blue-500 hover:text-blue-800 mr-6 text-sm"><a href="https://www.linkedin.com/in/anuj-kafle-97a037285/">Linkedin</a></li>
    </div>
    <div class="w-full h-full ml-6">
-    <img src="{% static '../static/icons8-github-logo-50.png'%}" alt="logo" class="w-10 h-10 ml-6"/>
+    <img src="{% static '../static/icons8-github-logo-50.png'%}" alt="logo" class="w-10 h-10 md:ml-6"/>
    <li class="text-black hover:font-bold mr-6 text-sm"><a href="https://github.com/AnujKafle06">Github</a></li>
 </div>
 </div>
@@ -75,13 +78,13 @@
 <p class="text-sm ml-10 mb-10">The skill I have been working on:</p>
 
 
-    <div id="skills-1-to-3" class="  gap-28 flex  p-12 m-8 items-end text-start flex-wrap">
+    <div id="skills-1-to-3" class="  gap-28 flex  p-12 m-8 items-end md:text-start flex-wrap">
         
         {% for first in fetch %}
         <div class="skill_section">
             
-                <img src="{{ first.img.url }}" alt="{{ first.name }}" class="w-48 h-38 flex flex-nowrap shadow-2xl p-4 mb-12 rounded-lg hover:bg-sky-300 ease-in-out duration-1000 ">
-                <h3 class="content-end text-start">{{ first.name }}</h3>
+                <img src="{{ first.img.url }}" alt="{{ first.name }}" class="md:w-48 md:h-38 md:flex md:flex-nowrap shadow-2xl p-4 mb-12 rounded-lg hover:bg-sky-300 ease-in-out duration-1000 ">
+                <h3 class="md:content-end md:text-start ">{{ first.name }}</h3>
             
           </div>
         {% endfor %}
