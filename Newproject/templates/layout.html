@@ -28,20 +28,20 @@
   
         
           <ul class="flex md:gap-6 justify-center">
-            <li class="hover:bg-sky-300 p-2 rounded-md border-r-2 m-2 mr-2">
+            <li class="hover:bg-sky-300 p-2 rounded-md border-r-2 m-2 mr-2" id="101">
               <a href="#" class="text-nowrap">Home</a>
             </li>
-            <li class="hover:bg-sky-300 p-2 rounded-md border-r-2 m-2 mr-2">
-              <a href="#" class="text-nowrap">About Me</a>
+            <li class="hover:bg-sky-300 p-2 rounded-md border-r-2 m-2 mr-2" id="102">
+              <a href="#about" class="text-nowrap">About Me</a>
             </li>
             <li class="hover:bg-sky-300 p-2 rounded-md border-r-2 m-2 mr-2">
-              <a href="#" class="text-nowrap">Skill</a>
+              <a href="#skill" class="text-nowrap">Skill</a>
             </li>
             <li class="hover:bg-sky-300 p-2 rounded-md border-r-2 m-2 mr-2">
-              <a href="#" class="text-nowrap">Contact</a>
+              <a href="#contact" class="text-nowrap">Contact</a>
             </li>
             <li class="hover:bg-sky-300 p-2 rounded-md border-r-2 m-2 mr-2">
-              <a href="#" class="text-nowrap">Project</a>
+              <a href="#project" class="text-nowrap">Project</a>
             </li>
           </div>
               <div class="list-none p-4">
@@ -72,4 +72,20 @@
       {% block footer %} &copy; CopyRight 2024 {% endblock %}
     
   </body>
+<script>
+
+  function navigateToPath(){
+    const path = window.location.pathname;
+   console.log(path)
+    path.scrollIntoView({behaviour:"smooth"})
+  }
+
+  navigateToPath();
+
+  window.addEventListener("popState", navigateToPath)
+
+ 
+
+</script>
+
 </html>
